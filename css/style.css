@@ -11,10 +11,7 @@ body{
 
 }
 header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    
     height: 90vh;
     width: 100%;
     background-image: url("../img/header-bg.jpg");
@@ -25,11 +22,24 @@ header{
     color:white;
     
 }
-
+.header_back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right , #310cc77e,#a029c47e);
+}
 header .logo,.header_center{
     background: none;
 }
-
+.header_center{
+    position: absolute;
+    bottom: 150px;
+    padding: 20px;
+}
 h1,h2,h3,strong,nav,ul,li,a,img,.logo,p{
     background: none;
     padding:0;
@@ -142,6 +152,7 @@ header nav{
 }
 
 .hover_content{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
@@ -151,14 +162,22 @@ header nav{
     padding-right: 2%;
     padding-top: 10%;
     padding-bottom: 10%;
-    width: 100%;
+    width: 96%;
    
 }
 .text{
-    background: linear-gradient(to right , #3b18c960,#9a35b959);;
+    background: linear-gradient(to right , #3b18c960,#9a35b959);
     color: white;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.text{
+    visibility: hidden;
+}
+.item:hover .text{
+    visibility: visible;
 }
 
 #item1{
@@ -177,22 +196,29 @@ header nav{
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
 }
 .form{
-    display:flex;
+    
     background-image: url('../img/s2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(to right , #3b18c960,#9a35b959);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    width: 90%;
     height: 80vh;
     padding-top: 10%;
     padding-bottom: 10%;
     padding-left: 5%;
     padding-right: 5%
+}
+.sendForm{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right , #3b18c960,#9a35b959);
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .info{
